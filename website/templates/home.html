@@ -1,0 +1,24 @@
+<!---->{% extends "base.html" %}
+
+<!---->{% block title %}Home{% endblock %}
+
+<!---->{% block content %}
+
+<h1 class="fs-2">Welcome, {{ user.username }}</h1>
+<p>
+  Feel free to explore the various discussion threads, share your thoughts, ask
+  questions, and engage with other members.
+</p>
+<hr />
+<h3 class="fs-3">Posts</h3>
+<div id="posts">
+  <!---->{% for post in posts %}
+  <!---->{% include 'post_div.html' %}
+  <!---->{% endfor %}
+  <br />
+  <div>
+    <a href="/create-post/" class="btn btn-md btn-primary">Create a post</a>
+  </div>
+</div>
+
+<!---->{% endblock %}

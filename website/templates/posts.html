@@ -1,0 +1,12 @@
+<!---->{% extends "base.html" %}
+<!---->{% block title %}Your Posts{% endblock %}
+<!---->{% block content %}
+<h1>{{username}}'s Posts</h1>
+<br />
+<!---->{% for post in posts %}
+<!---->{% include 'post_div.html' %}
+<!---->{% endfor %}
+<div class="d-flex justify-content-between align-items-center">
+  <a href="/home" class="btn btn-md btn-secondary">Back</a>
+</div>
+<!---->{% endblock %}
